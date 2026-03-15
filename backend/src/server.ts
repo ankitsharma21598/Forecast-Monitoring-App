@@ -5,7 +5,11 @@ import windRoutes from "./routes/windRoutes";
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:5173"], // Allow requests from the frontend
+  }),
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {
