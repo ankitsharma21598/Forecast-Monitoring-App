@@ -7,7 +7,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"], // Allow requests from the frontend
+    origin: [
+      "https://forecast-monitoring-app-nhq1.vercel.app",
+      "http://localhost:5173",
+    ], // Allow requests from the frontend
   }),
 );
 app.use(express.json());
