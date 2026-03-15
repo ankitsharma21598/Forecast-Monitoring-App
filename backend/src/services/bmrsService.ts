@@ -1,6 +1,8 @@
 import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config();
 
-const BASE_URL = "https://data.elexon.co.uk/bmrs/api/v1";
+const BASE_URL = process.env.BMRS_BASE_URL;
 
 /**
  * FUELHH stream: actual half-hourly generation by fuel type.
