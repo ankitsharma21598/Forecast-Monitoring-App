@@ -1,7 +1,9 @@
 import axios from "axios";
 import type { WindData } from "../types/wind";
 
-const API_URL = "http://localhost:8000/api/wind";
+const API_URL =
+  import.meta.env.VITE_API_URL + "/api/wind" ||
+  "http://localhost:8000/api/wind";
 
 export const fetchWindData = async (
   start: Date,
